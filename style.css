@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #faf6ed; color: #292e27; font-family: Arial, sans-serif; line-height: 1.5; }
+main { max-width: 900px; margin: 30px auto; padding: 24px; }
+header { border-left: 6px solid #386140; padding-left: 18px; }
+h1 { margin-top: 0; } label { display: block; margin-top: 16px; }
+input, select, button { font: inherit; padding: 10px; border-radius: 6px; border: 1px solid #aaa; }
+input { max-width: 100%; }
+button { background: #386140; color: white; cursor: pointer; margin: 6px 4px 6px 0; border-color: #386140; }
+button:hover { background: #26442c; }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #b76a18; outline-offset: 3px; }
+.carte-menu { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+article { background: white; padding: 20px; border-radius: 12px; border: 1px solid #d5dacf; }
+#recapitulatif { margin: 18px 0; padding: 12px 18px; border: 2px solid #d5dacf; border-radius: 8px; }
+#recapitulatif.commande-importante { border-color: #b76a18; background: #fff0d6; }
+.erreur { color: #a51d30; font-weight: bold; }
+.succes { color: #246132; font-weight: bold; }
+li { margin-bottom: 12px; } li button { margin-left: 12px; }
+@media (max-width: 600px) { .carte-menu { grid-template-columns: 1fr; } main { margin: 0; padding: 16px; } }

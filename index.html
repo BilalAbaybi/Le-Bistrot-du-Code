@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Le Bistrot du Code</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script> <!-- attend que HTML soit chargé avant d'exécuter le script -->
+</head>
+<body>
+<main>
+  <header><p>Prise de commandes</p><h1>Le Bistrot du Code</h1></header>
+  <label for="client">Nom du client</label>
+  <input id="client" type="text" maxlength="40" placeholder="Exemple : Camille">
+  <h2 id="titre-commande">Commande de Client anonyme</h2>
+  <section class="carte-menu" aria-label="Notre carte">
+    <article>
+      <h2>Burger maison</h2><p>12,00 €</p>
+      <p>Quantité : <span id="quantite-burger">0</span></p>
+      <button id="moins-burger" type="button">Retirer un burger</button>
+      <button id="plus-burger" type="button">Ajouter un burger</button>
+    </article>
+    <article>
+      <h2>Mousse au chocolat</h2><p>5,00 €</p>
+      <p>Quantité : <span id="quantite-dessert">0</span></p>
+      <button id="moins-dessert" type="button">Retirer un dessert</button>
+      <button id="plus-dessert" type="button">Ajouter un dessert</button>
+    </article>
+  </section>
+  <form id="form-commande" novalidate>
+    <label for="service">Mode de service</label>
+    <select id="service">
+      <option value="sur-place">Sur place</option>
+      <option value="a-emporter">À emporter</option>
+    </select>
+    <p id="info-service">La commande sera servie à table.</p>
+    <section id="recapitulatif" aria-label="Récapitulatif">
+      <p>Nombre d’articles : <span id="nombre-articles">0</span></p>
+      <p>Total : <strong id="total">0,00 €</strong></p>
+      <p id="statut-panier" role="status">Votre panier est vide.</p>
+    </section>
+    <button id="vider" type="button">Vider le panier</button>
+    <button type="submit">Valider la commande</button>
+  </form>
+  <p id="message" role="status"></p>
+  <section aria-labelledby="titre-commandes">
+    <h2 id="titre-commandes">Commandes enregistrées</h2>
+    <ul id="commandes"></ul>
+  </section>
+</main>
+</body>
+</html>
